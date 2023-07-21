@@ -6,7 +6,7 @@
     font-family: 'Poppins',sans-serif;
 }
 body{
-    background: #4b2056;
+    background: #151016;
 }
 .container{
     display: flex;
@@ -74,22 +74,15 @@ body{
 /********* Home *****************/
 
 .nav{
-    background: #fff;
+    background: #444444;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     line-height: 60px;
     z-index: 100;
 }
-.logo{
-    font-size: 25px;
-    font-weight: 900;
-    
-}
-.logo a{
-    text-decoration: none;
-    color: #000;
-}
+
+
 .right-links a{
     padding: 0 10px;
 }
@@ -136,3 +129,92 @@ main{
     color: red;
 }
 
+
+
+  /* Estilo del calendario */
+  .calendar {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #calendar {
+    width: 800px;
+    height: 600px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeInUp 1s;
+  }
+
+
+  .btn-primary {
+    width: 100px;
+    padding: 0px 400px 1px 10px;
+  }
+
+
+  /* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Estilos para el div "usuario" */
+.usuario {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 30%; /* Abarca el 50% del ancho de la pantalla */
+    height: 80vh; /* Abarca toda la altura vertical de la pantalla */
+    float: left; /* Alinea a la izquierda */
+}
+
+.usuario h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.usuario p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.usuario button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.usuario .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.usuario .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.usuario .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.usuario .btn-secondary:hover {
+    background-color: #4b5459;
+}
+
+
+.goes{
+    width: 60px;
+}

@@ -30,7 +30,8 @@
 <body>
     <div class="nav">
         <div class="logo">
-            <p><a href="home.php">Logo</a> </p>
+           
+            <img class="goes" src="img/goesGG.png" alt="">
         </div>
 
         <div class="right-links">
@@ -56,27 +57,28 @@
     </div>
     <main>
          
+        <!-- Div para información del usuario -->
+          <div class="usuario">
+          <p class="top">
+        <p class="box">
+            Hello <b><?php echo $res_Uname ?></b>, Welcome
+        </p>
+        <p class="box">
+            Your email is <b><?php echo $res_Email ?></b>.
+        </p>
+    </p>
+    <p class="bottom">
+        <p class="box">
+            Your cellphone is: <b><?php echo $res_Cellphone ?> </b>.
+        </p>
+    </p>
+</p>
+          </div>
 
-          <!-- INFO -->
-       <div class="main-box top">
-          <div class="top">
-            <div class="box">
-                <p>Hello <b><?php echo $res_Uname ?></b>, Welcome</p>
-            </div>
-            <div class="box">
-                <p>Your email is <b><?php echo $res_Email ?></b>.</p>
-            </div>
-          </div>
-          <div class="bottom">
-            <div class="box">
-                <p>Your cellphone is: <b><?php echo $res_Cellphone ?> </b>.</p> 
-            </div>
-          </div>
-       </div>
 
          <!-- CALENDARIO HTML -->
 
-         <div class="container calendar">
+         <div class="calendar">
 
 
             <div class="col-md-8 offset-md-2 ">
@@ -156,7 +158,7 @@
 
 
 
-</div>
+        </div>
 
 
     </main>
