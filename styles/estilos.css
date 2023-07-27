@@ -1,0 +1,198 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	padding: 5%;
+    background: #151016;
+	
+}
+
+h1{
+	color: white;
+}
+p{
+	color: white;
+}
+.pI{
+	color: black;
+}
+/* :D**/
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #444444;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	line-height: 60px;
+	z-index: 100;
+  }
+  .right-links a {
+	padding: 0 10px;
+  }
+
+
+
+.menu {
+	display: flex;
+	
+}
+
+.menu p {
+	color: white;
+	margin-right: 2rem;
+	cursor: pointer;
+}
+
+.content {
+	margin-top: 2rem;
+}
+
+[data-content] {
+	display: none;
+}
+
+.active[data-content] {
+	display: block;
+}
+
+
+.fc-dayGridMonth-view,
+.fc-timeGridWeek-view,
+.fc-timeGridDay-view {
+  background-color: white;
+  height: 600px;
+  overflow: auto; /* Para agregar una barra de desplazamiento si es necesario */
+}
+
+
+
+
+
+
+
+/* Estilos para el div que contiene los datos del usuario */
+#datos-usuario {
+	padding: 20px;
+	background-color: #f5f5f5;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-top: 20px;
+	animation: fadeInUp 0.8s ease-in-out;
+	color: #333;
+  }
+  
+  #datos-usuario p {
+	margin: 5px 0;
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeInUp {
+	from {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  /* Estilos para resaltar los datos del usuario */
+  #datos-usuario p strong {
+	color: #4285F4;
+  }
+  
+  /* Estilo para botón de cambio de perfil */
+  #btn-change-profile {
+	background-color: #4285F4;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 8px 12px;
+	margin-top: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  #btn-change-profile:hover {
+	background-color: #3367D6;
+  }
+  
+  /* Estilos para el botón de log out */
+  .btn-logout {
+	background-color: #dc3545;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 8px 12px;
+	margin-top: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  .btn-logout:hover {
+	background-color: #c82333;
+  }
+
+  
+ .goes {
+	width: 60px;
+  }
+
+
+
+/* styles/foro.css */
+
+/* Estilo para el formulario de comentarios */
+.comment-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.comment-form button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para los comentarios */
+.comentario {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+	background-color: rgb(46, 44, 46);
+}
+
+.comentario p.fecha {
+    font-size: 12px;
+    color: #696666;
+}
+
+
+
+

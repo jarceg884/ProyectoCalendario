@@ -42,7 +42,7 @@
                     echo "<div class='message'>
                     <p>Profile Updated!</p>
                 </div> <br>";
-              echo "<a href='home.php'><button class='btn'>Go Home</button>";
+              echo "<a href='Menu.php'><button class='btn'>Go Home</button>";
        
                 }
                }else{
