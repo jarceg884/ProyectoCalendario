@@ -69,12 +69,17 @@
 
 		<div data-content id="inicio" class="active">
 			<h1>Inicio</h1>
+			
 			    <!-- Agregar los datos del usuario aquí -->
-			<div id="datos-usuario">
-				<p class="pI"><strong>Nombre de usuario:</strong> <?php echo $res_Uname; ?></p>
-				<p class="pI"><strong>Email:</strong> <?php echo $res_Email; ?></p>
-				<p class="pI"><strong>Teléfono:</strong> <?php echo $res_Cellphone; ?></p>
-			</div>
+				<div id="datos-usuario">
+					<div style="float: left; margin-right: 15px;">
+						<img src="img/goesGG.png" alt="Imagen de perfil" style="width: 100px; height: 100px; border-radius: 50%;">
+					</div>
+					<p class="pI"><strong>Nombre de usuario:</strong> <?php echo $res_Uname; ?></p>
+					<p class="pI"><strong>Email:</strong> <?php echo $res_Email; ?></p>
+					<p class="pI"><strong>Teléfono:</strong> <?php echo $res_Cellphone; ?></p>
+				</div>
+
 
 		</div>
 
