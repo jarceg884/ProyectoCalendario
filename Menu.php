@@ -60,9 +60,12 @@
     </div>
 
 	<div class="menu">
-		<p data-target="#inicio">Inicio</p>
-		<p data-target="#calendario">Calendario</p>
-		<p data-target="#Foro">Foro</p>
+	<p data-target="#inicio">Inicio</p>
+	<p data-target="#calendario">Calendario</p>
+	<p data-target="#Foro">Foro</p>
+	<p data-target="#perfil">Perfil de Usuario</p>
+	<p data-target="#usuarios">Usuarios</p>
+
 	</div>
 
 	<div class="content">
@@ -78,6 +81,14 @@
 					<p class="pI"><strong>Nombre de usuario:</strong> <?php echo $res_Uname; ?></p>
 					<p class="pI"><strong>Email:</strong> <?php echo $res_Email; ?></p>
 					<p class="pI"><strong>Teléfono:</strong> <?php echo $res_Cellphone; ?></p>
+
+					<h2>Gobiernos Estudiantiles en ULACIT</h2>
+					<p>Los gobiernos estudiantiles en la ULACIT juegan un papel crucial en la representación estudiantil y en el desarrollo de actividades extracurriculares. Estos son algunos aspectos clave:</p>
+					<ul>
+					<li>Funcionan como el principal canal de comunicación entre los estudiantes y la administración universitaria.</li>
+					<li>Organizan eventos, charlas y actividades que enriquecen la vida estudiantil.</li>
+					<li>Promueven la participación activa de los estudiantes en la toma de decisiones universitarias.</li>
+					<li>Fomentan el liderazgo, el trabajo en equipo y otras habilidades blandas entre sus miembros.</li>
 				</div>
 
 
@@ -199,6 +210,59 @@
 			?>
 
 		</div>
+
+		<div data-content id="perfil">
+				<div class="container mt-5">
+				<?php 
+		
+
+		include("php/config.php");
+		if(!isset($_SESSION['valid'])){
+			header("Location: Menu.php");
+		}
+
+		$id = $_SESSION['id'];
+		$query = mysqli_query($con,"SELECT * FROM users WHERE Id=$id");
+
+		$user = mysqli_fetch_assoc($query);
+
+		?>
+			<h2>Perfil de Usuario</h2>
+			
+			<hr>
+
+			<div class="Perfil">
+				<div class="row">
+				<div class="col-md-4">
+					<!-- Foto de perfil del usuario -->
+					<img src="img/goesGG.png" alt="Imagen de perfil" class="img-thumbnail">
+					<a href="edit.php?Id=<?php echo $user['Id']; ?>" class="btn btn-primary mt-3">Editar Perfil</a>
+				</div>
+
+				<div class="col-md-8">
+					<div class="mb-3">
+						<label><strong>Nombre de usuario:</strong></label>
+						<p><?php echo $user['Username']; ?></p>
+					</div>
+
+					<div class="mb-3">
+						<label><strong>Email:</strong></label>
+						<p><?php echo $user['Email']; ?></p>
+					</div>
+
+					<div class="mb-3">
+						<label><strong>Teléfono:</strong></label>
+						<p><?php echo $user['Cellphone']; ?></p>
+					</div>
+				</div>
+				</div>
+			</div>
+
+			<hr>
+			<a href="php/logout.php" class="btn btn-danger">Cerrar Sesión</a>
+
+		</div>
+		
 
 </body>
 </html>
