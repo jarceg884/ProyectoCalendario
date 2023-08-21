@@ -5,6 +5,8 @@
    if(!isset($_SESSION['valid'])){
     header("Location: index.php");
    }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +66,7 @@
 	<p data-target="#calendario">Calendario</p>
 	<p data-target="#Foro">Foro</p>
 	<p data-target="#perfil">Perfil de Usuario</p>
-	<p data-target="#usuarios">Usuarios</p>
+	
 
 	</div>
 
@@ -262,6 +264,8 @@
 			<a href="php/logout.php" class="btn btn-danger">Cerrar Sesión</a>
 
 		</div>
+
+
 		
 
 </body>
