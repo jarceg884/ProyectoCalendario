@@ -22,6 +22,7 @@
 			<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.js"></script>
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css">
 			<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.js"></script>
+			<link rel ="shortcut icon" href="https://e7.pngegg.com/pngimages/97/792/png-clipart-training-coaching-physical-fitness-brand-favicon-physical-fitness-leaf.png" type="image/x-icon">
 
 
 	<link rel="stylesheet" href="styles/estilos.css">

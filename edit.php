@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <title>Change Profile</title>
+    <link rel ="shortcut icon" href="https://e7.pngegg.com/pngimages/97/792/png-clipart-training-coaching-physical-fitness-brand-favicon-physical-fitness-leaf.png" type="image/x-icon">
 </head>
 <body>
     <div class="nav">
