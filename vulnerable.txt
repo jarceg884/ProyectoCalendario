@@ -1,9 +1,27 @@
 <?php 
+   // Inicia una nueva sesión o reanuda la existente
    session_start();
+
+   // Detalles de la conexión a la base de datos
+   $host = "buiguowxmsxwe150g4dx-mysql.services.clever-cloud.com";
+   $database = "buiguowxmsxwe150g4dx";
+   $user = "u3pcepfrwufekq2l";
+   $password = "2jgydnYwrk4wBOnwdZGc";
+   $port = 3306;
+
+   // Crear conexión
+   $con = mysqli_connect($host, $user, $password, $database, $port);
+
+   // Verificar conexión
+   if (mysqli_connect_errno()) {
+       echo "Failed to connect to MySQL: " . mysqli_connect_error();
+       exit();
+   }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadatos y enlaces a hojas de estilo -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,35 +33,38 @@
       <div class="container">
         <div class="box form-box">
             <?php 
-             
-              include("php/config.php");
+              // Verifica si el formulario ha sido enviado
               if(isset($_POST['submit'])){
-                // Tomando las entradas directamente sin sanitizar
+                // Tomando las entradas directamente sin sanitizar (VULNERABILIDAD)
                 $email = $_POST['email'];
                 $password = $_POST['password'];
 
-                // Consulta vulnerable a inyecciones SQL
+                // Consulta SQL vulnerable a inyecciones SQL
                 $query = "SELECT * FROM users WHERE Email='$email' AND Password='$password'";
                 $result = mysqli_query($con, $query) or die("Select Error");
                 $row = mysqli_fetch_assoc($result);
 
+                // Verifica si se encontró un usuario
                 if(is_array($row) && !empty($row)){
+                    // Establece variables de sesión
                     $_SESSION['valid'] = $row['Email'];
                     $_SESSION['username'] = $row['Username'];
                     $_SESSION['cellphone'] = $row['Cellphone'];
                     $_SESSION['id'] = $row['Id'];
                 }else{
+                    // Muestra un mensaje de error si las credenciales son incorrectas
                     echo "<div class='message'>
                       <p>Wrong Username or Password</p>
                        </div> <br>";
                    echo "<a href='index.php'><button class='btn'>Go Back</button>";
-         
                 }
+                // Redirige al usuario si la sesión es válida
                 if(isset($_SESSION['valid'])){
                     header("Location: Menu.php");
                 }
-              }else{
+              }
             ?>
+            <!-- Formulario de inicio de sesión -->
             <header>Login</header>
             <form action="" method="post">
                 <div class="field input">
@@ -64,10 +85,13 @@
                 </div>
             </form>
         </div>
-        <?php } ?>
       </div>
 </body>
 </html>
+<?php
+   // Cerrar conexión
+   mysqli_close($con);
+?>
 
 
 DB NAME: buiguowxmsxwe150g4dx
